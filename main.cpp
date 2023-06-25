@@ -10,7 +10,6 @@
 #include "video.h"
 
 static int g_multipixel = DPTX_MP_SINGLE_PIXEL;
-static int g_display_protocol = VCEA;
 static int g_refresh_rate = 60000;
 static bool g_verbose = false;
 
@@ -24,7 +23,6 @@ int dptx_ts_calculate(struct video_timing *timing, int lane_num, int rate,
   uint8_t init_threshold;
   int link_rate;
   int link_clk;
-  int retval = 0;
   int ts;
   int T1;
   int T2;
@@ -297,6 +295,7 @@ int main(int argc, char **argv) {
   LOG("  multipixel:%d\n", g_multipixel);
   LOG("     verbose:%d\n", g_verbose);
   LOG("   timing id:%d\n", timing.video_timing_id);
+  LOG(" display_protocol:%d\n", timing.display_protocol);
   ret = get_video_timing(&timing, g_refresh_rate);
   if (ret < 0) {
     printf("get video timing ERROR!\n");
