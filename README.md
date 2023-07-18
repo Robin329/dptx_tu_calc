@@ -1,7 +1,7 @@
 # dptx_tu_calc
 DPTX tu calculate.
 
-#         Usage:            ./dptx_tu_calc [opt] ...
+-         Usage:            ./dptx_tu_calc [opt] ...
              -t, --timing  : 'VCEA','DMT','USER' timing id
              -p, --protocol  :  '0:VCEA','1:CVT','2:DMT','3:USER'display protocol
              -f, --refresh   : timing refresh rate
